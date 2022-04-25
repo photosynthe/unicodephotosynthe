@@ -1,0 +1,39 @@
+#Rime schema
+
+schema:
+  schema_id: unicodephotosynthe
+  name: Unicode
+  version: 1.0
+  author:
+    -光能合成者 telegram@photosynthe
+  description: |
+    Unicode內碼輸入法
+
+engine:
+  processors:
+    - speller #輸入輸出轉換
+    - express_editor #輸出鍵，必須在speller後面
+    - selector #選字
+    - ascii_composer #Unicode-英文切換
+  segmentors:
+    - abc_segmentor
+  translators:
+    - script_translator
+
+translator:
+  dictionary: unicodephotosynthe
+
+speller:
+  alphabet: uabcdef0123456789
+
+menu:
+  page_size: 5
+  alternative_select_keys: ghjkl
+
+editor:
+  bindings:
+    Return: commit_script_text
+
+switches:
+  - name: ascii_mode
+    states: [Unicode,英文]
