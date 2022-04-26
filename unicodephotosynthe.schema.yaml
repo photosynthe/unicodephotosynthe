@@ -3,7 +3,7 @@
 schema:
   schema_id: unicodephotosynthe
   name: Unicode
-  version: 1.0.0
+  version: 1.0.1
   author:
     -光能合成者 telegram@photosynthe
   description: |
@@ -12,8 +12,8 @@ schema:
 engine:
   processors:
     - speller #輸入輸出轉換
-    - express_editor #輸出鍵，必須在speller後面
-    - selector #選字
+    - selector #選字，必須在express_editor前
+    - express_editor #輸出鍵，必須在speller後
     - ascii_composer #Unicode-英文切換
   segmentors:
     - abc_segmentor
