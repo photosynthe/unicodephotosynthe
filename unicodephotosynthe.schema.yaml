@@ -3,7 +3,7 @@
 schema:
   schema_id: unicodephotosynthe
   name: Unicode
-  version: 1.0
+  version: 1.0.0
   author:
     -光能合成者 telegram@photosynthe
   description: |
